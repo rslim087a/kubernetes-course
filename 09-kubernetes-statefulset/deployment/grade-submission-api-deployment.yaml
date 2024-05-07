@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grade-submission-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grade-submission-api
+  template:
+    metadata:
+      labels:
+        app: grade-submission-api
+    spec:
+      containers:
+        - name: grade-submission-api
+          image: rslim087/grade-submission-api:2.0.0
+          envFrom:
+            - secretRef:
+                name: grade-submission-api-secret
+          resources:
+            limits:
+              memory: "500Mi"
+              cpu: "1000m"
+          ports:
+            - containerPort: 3000

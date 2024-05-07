@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment  
+metadata:
+  name: product-catalog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-catalog
+  template:
+    metadata:
+      labels:
+        app: product-catalog
+    spec:
+      containers:
+      - name: product-catalog
+        image: rslim087/product-catalog:1.0.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3001

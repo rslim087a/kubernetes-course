@@ -1,0 +1,10 @@
+apiVersion: v1        
+kind: Service
+metadata:
+  name: product-catalog  
+spec:
+  selector:
+    app: product-catalog
+  ports:
+  - port: 3001
+    targetPort: 3001

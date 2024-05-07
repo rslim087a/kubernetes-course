@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-inventory  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-inventory
+  template:
+    metadata:
+      labels:
+        app: product-inventory
+    spec:
+      containers:
+      - name: product-inventory
+        image: rslim087/product-inventory:1.0.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3002

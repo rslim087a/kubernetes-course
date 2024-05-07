@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-grade-submission-portal
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: grade-submission-portal
+  template:
+    metadata:
+      labels:
+        app: grade-submission-portal
+    spec:
+      containers:
+        - name: grade-submission-portal
+          image: {{ .Values.image.repository }}
+          envFrom:
+            - configMapRef:
+                name: {{ .Values.configMap.name }}
+          resources:
+            limits:
+              memory: {{ .Values.resources.limits.memory }}
+              cpu: {{ .Values.resources.limits.cpu }}
+          ports:
+            - containerPort: {{ .Values.service.port }}

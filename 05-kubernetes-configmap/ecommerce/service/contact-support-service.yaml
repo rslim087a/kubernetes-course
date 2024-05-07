@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: contact-support-team
+spec:
+  selector:
+    app: contact-support-team
+  ports:
+  - port: 8000
+    targetPort: 8000

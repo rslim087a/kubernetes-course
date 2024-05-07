@@ -1,0 +1,4 @@
+apiVersion: v2
+name: grade-submission-portal-helm
+description: A Helm chart for deploying grade-submission-portal on Kubernetes
+version: 0.1.0

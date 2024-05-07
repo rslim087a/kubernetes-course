@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shipping-and-handling
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shipping-and-handling
+  template:
+    metadata:
+      labels:
+        app: shipping-and-handling
+    spec:
+      containers:
+      - name: shipping-and-handling
+        image: rslim087/shipping-and-handling:1.0.0
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "1000m"
+        ports:
+        - containerPort: 8080
