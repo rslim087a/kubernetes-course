@@ -1,4 +1,0 @@
-apiVersion: v2
-name: mongodb-helm
-description: A Helm chart for deploying MySQL on Kubernetes
-version: 0.1.0
