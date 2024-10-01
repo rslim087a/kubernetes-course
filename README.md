@@ -3,4 +3,4 @@
 
 ## Relevant Tutorials:
 
-- [Deploying the Kube-Prometheus-Stack: A Comprehensive Guide to Kubernetes Monitoring](https://www.reddit.com/r/kubernetes/comments/1ftpp80/simple_guide_to_deploying_the_kubeprometheusstack/)
+- [Deploying the Kube-Prometheus-Stack: A Comprehensive Guide to Kubernetes Monitoring](https://kubernetestraining.io/blog/deploying-the-kube-prometheus-stack-a-comprehensive-guide-to-kubernetes-monitoring)
