@@ -1,1 +1,3 @@
-# Resources for the [Kubernetes Bootcamp](https://kubernetestraining.io/)
+### Become a Cloud and DevOps Engineer
+
+Visit https://rayanslim.com
